@@ -1,0 +1,226 @@
+.dot-container {
+    position: relative;
+    width: 100%;
+    background-color: #E8E8E8;
+    overflow: hidden;
+    /*はみ出した部分を非表示にする*/
+
+    .height-cont {
+        .height1 {
+            height: 197px;
+
+            @media print,
+            screen and (max-width: 768px) {
+                height: 149px;
+            }
+        }
+
+        .height2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-bottom: 0;
+            width: 860px;
+
+            @media print,
+            screen and (max-width: 768px) {
+                width: calc(343px / 375px * 100%);
+                flex-direction: column;
+            }
+
+            .height3 {
+                padding: 60px;
+                width: 400px;
+                box-sizing: border-box;
+                margin-bottom: 32px;
+
+                @media print,
+                screen and (max-width: 768px) {
+                    padding: 31px;
+                    width: 100%;
+                }
+
+                .about-title {
+                    font-size: 28px;
+                    font-weight: bold;
+                    font-family: "游ゴシック";
+                    padding-bottom: 15px;
+                    opacity: 0;
+
+                    @media print,
+                    screen and (max-width: 768px) {
+                        font-size: 24px;
+                    }
+                }
+
+                .about-eng {
+                    font-size: 18px;
+                    font-weight: bold;
+                    font-family: "游ゴシック";
+                    padding-bottom: 30px;
+                    opacity: 0;
+                    @media print,
+                    screen and (max-width: 768px) {
+                        font-size: 16px;
+                    }
+                }
+
+                .about-text {
+                    font-size: 16px;
+                    font-family: "游ゴシック";
+                    text-align: left;
+                    letter-spacing: 1.6px;
+                    line-height: 27px;
+                    opacity: 0;
+                }
+            }
+
+            .height4 {
+                margin-bottom: 60px;
+                @media print,
+                    screen and (max-width: 768px) {
+                        margin-bottom: 32px;
+                    }
+            }
+
+            .height5{
+                @media print,
+                    screen and (max-width: 768px) {
+                        margin-bottom: 60px;
+                    }
+            }
+        }
+    }
+}
+
+.item {
+    position: absolute;
+    width: 314px;
+    height: 314px;
+    border-radius: 50%;
+    background: #FF2A2A;
+    animation: diagonal-move-anim 3s linear infinite;
+}
+
+@keyframes diagonal-move-anim {
+
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        // transform: translate(150px, 150px);
+        transform: translate(300px, 300px);
+    }
+
+}
+
+.item2 {
+    left: 700px;
+}
+
+.item3 {
+    top: 386px;
+    left: 386px;
+}
+
+.item4 {
+    top: 386px;
+    left: 1086px;
+}
+
+.item5 {
+    top: 700px;
+    left: 0;
+}
+
+.item6 {
+    top: 700px;
+    left: 700px;
+}
+
+.about {
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.sec-box {
+    position: relative;
+}
+
+.about-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 0;
+
+    .about-items {
+        background-color: white;
+        padding: 60px;
+        width: 400px;
+        box-sizing: border-box;
+        border-radius: 20px 20px 20px 20px;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            padding: 31px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .about-title {
+            font-size: 28px;
+            font-weight: bold;
+            font-family: "游ゴシック";
+            padding-bottom: 15px;
+
+            @media (max-width: 768px) {
+                font-size: 24px;
+            }
+        }
+
+        .about-eng {
+            font-size: 18px;
+            font-weight: bold;
+            font-family: "游ゴシック";
+            padding-bottom: 30px;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
+        }
+
+        .about-text {
+            font-size: 16px;
+            font-family: "游ゴシック";
+            text-align: left;
+            letter-spacing: 1.6px;
+            line-height: 27px;
+        }
+    }
+
+    .list3 {
+        @media (max-width: 768px) {
+            margin-bottom: 32px;
+        }
+    }
+
+    .list1 {
+        margin-bottom: 32px;
+    }
+
+    .list2 {
+        margin-bottom: 32px;
+    }
+}
+
+.about {
+    .sectitle-cont {
+        .sec-title {
+            padding-top: 60px;
+        }
+    }
+}

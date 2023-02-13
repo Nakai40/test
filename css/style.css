@@ -1,0 +1,876 @@
+@charset "UTF-8";
+.header {
+  display: flex;
+}
+.header .logo {
+  z-index: 2;
+  padding-top: 50px;
+  padding-left: 40px;
+  color: #FF2A2A;
+}
+.header .logo .eng {
+  font-size: 33px;
+  font-weight: bold;
+  margin-bottom: 7px;
+  letter-spacing: 10px;
+  font-family: "游ゴシック", "Yu Gothic";
+}
+.header .logo .jp {
+  font-size: 13px;
+}
+.header .logo-w {
+  display: none;
+}
+.header .show {
+  display: block;
+  z-index: 4;
+  padding-top: 25px;
+  padding-left: 40px;
+  color: white;
+  position: fixed;
+}
+.header .show .eng {
+  font-size: 33px;
+  font-weight: bold;
+  margin-bottom: 7px;
+  letter-spacing: 10px;
+  font-family: "游ゴシック", "Yu Gothic";
+}
+.header .show .jp {
+  font-size: 13px;
+}
+.header .lgo-hide {
+  display: none;
+}
+
+.menu-btn {
+  position: fixed;
+  left: calc(100% - 100px);
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  z-index: 4;
+  background-color: #FF2A2A;
+}
+@media print, screen and (max-width: 768px) {
+  .menu-btn {
+    width: 75px;
+    height: 75px;
+  }
+}
+.menu-btn span {
+  display: block;
+  width: 50px;
+  height: 1px;
+  background: white;
+  position: absolute;
+  left: 25px;
+  transition: all 0.5s ease;
+}
+@media print, screen and (max-width: 768px) {
+  .menu-btn span {
+    width: 35px;
+  }
+}
+.menu-btn .bar1 {
+  top: 36px;
+}
+@media print, screen and (max-width: 768px) {
+  .menu-btn .bar1 {
+    top: 26px;
+  }
+}
+.menu-btn .bar2 {
+  top: 50px;
+}
+.menu-btn .bar3 {
+  bottom: 36px;
+}
+
+.menu-btn .bar1.open {
+  top: 50px;
+  transform: rotate(45deg);
+}
+.menu-btn .bar2.open {
+  opacity: 0;
+}
+.menu-btn .bar3.open {
+  top: 50px;
+  transform: rotate(-45deg);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FF2A2A;
+}
+
+.menu-li-1 {
+  margin-top: 110px;
+}
+
+.menu__item {
+  width: 100%;
+  height: auto;
+  padding-bottom: 20px;
+  text-align: center;
+  color: #fff;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.apply {
+  width: 250px;
+  position: relative;
+  padding-bottom: 0;
+}
+.apply:hover {
+  color: #FF2A2A;
+  background-color: white;
+}
+.apply .apply-bc {
+  width: 250px;
+  height: 51px;
+  position: absolute;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  top: 9px;
+  left: 5px;
+}
+.apply .apply-text {
+  height: auto;
+  height: 51px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* アニメーション前のメニューの状態 */
+.menu {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+
+/* アニメーション後のメニューの状態 */
+.menu.is-active {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.main {
+  font-size: 16px;
+}
+
+.main-top {
+  height: 723px;
+}
+@media (max-width: 768px) {
+  .main-top {
+    height: auto;
+  }
+}
+
+.sectitle-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sectitle-cont .sec-title {
+  font-size: 36px;
+  font-family: "游ゴシック";
+  font-weight: bold;
+  padding-top: 100px;
+}
+@media (max-width: 768px) {
+  .sectitle-cont .sec-title {
+    padding-top: 80px;
+    font-size: 28px;
+  }
+}
+.sectitle-cont .underbar {
+  background-color: #333333;
+  margin-top: 20px;
+  margin-bottom: 80px;
+  display: block;
+  height: 1px;
+  width: 100px;
+}
+@media (max-width: 768px) {
+  .sectitle-cont .underbar {
+    width: 80px;
+    margin-bottom: 40px;
+  }
+}
+
+.sec-container {
+  width: 860px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .sec-container {
+    width: 91.4666666667%;
+  }
+}
+
+.sec-container {
+  padding-bottom: 80px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+body {
+  font-family: "游ゴシック", "Yu Gothic";
+}
+
+.top {
+  display: flex;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .top {
+    flex-direction: column;
+  }
+}
+.top .invi {
+  display: none;
+}
+@media (max-width: 768px) {
+  .top .invi {
+    width: 100%;
+    display: block;
+  }
+  .top .invi img {
+    width: 100%;
+  }
+}
+.top .title-cont {
+  padding-top: 280px;
+  position: absolute;
+  left: 135px;
+}
+@media (max-width: 768px) {
+  .top .title-cont {
+    position: static;
+    padding-top: 0;
+  }
+}
+.top .title-cont .title {
+  font-size: 46px;
+  line-height: 73.6px;
+  letter-spacing: 4.6px;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .top .title-cont .title {
+    width: 91.4666666667%;
+    margin: 0 auto;
+    font-size: 28px;
+    line-height: 47px;
+    padding-bottom: 10px;
+  }
+}
+.top .title-cont .btn {
+  display: flex;
+  background-color: #FF0033;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 768px) {
+  .top .title-cont .btn {
+    width: 91.4666666667%;
+    margin: 0 auto;
+  }
+}
+.top .title-cont .btn:hover {
+  transform: scale(1.2);
+  transition-duration: 0.3s;
+}
+.top .title-cont .btn .btn-innner {
+  display: flex;
+}
+.top .title-cont .btn .btn-text {
+  font-size: 24px;
+  color: white;
+  position: relative;
+}
+.top .title-cont .btn .arrow {
+  width: 7px;
+  height: 7px;
+  border: 5px solid;
+  border-color: white white transparent transparent;
+  transform: rotate(45deg);
+  position: relative;
+  top: 4px;
+  left: 93px;
+}
+.top .fade-img {
+  position: absolute;
+  right: 0;
+  width: 1037px;
+  margin: -3px;
+}
+@media (max-width: 768px) {
+  .top .fade-img {
+    width: 100%;
+    position: static;
+  }
+}
+.top .fade-img img {
+  position: absolute;
+}
+@media (max-width: 768px) {
+  .top .fade-img img {
+    width: 100%;
+  }
+}
+
+.reason-cont {
+  background-color: #FF2A2A;
+  padding: 80px 0;
+}
+.reason-cont .reason-slide {
+  background-color: white;
+  display: flex;
+  width: 50%;
+  padding: 70px 0;
+  border-radius: 0px 20px 20px 0px;
+}
+@media (max-width: 768px) {
+  .reason-cont .reason-slide {
+    width: 95.7333333333%;
+    padding: 18px 0;
+  }
+}
+.reason-cont .reason-slide .reason-innner {
+  display: flex;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .reason-cont .reason-slide .reason-innner {
+    width: 88.3008356546%;
+    justify-content: center;
+  }
+}
+.reason-cont .reason-slide .rea-img {
+  width: 60px;
+}
+@media (max-width: 768px) {
+  .reason-cont .reason-slide .rea-img {
+    display: flex;
+    align-items: center;
+  }
+}
+.reason-cont .reason-slide .rea-img img {
+  width: 100%;
+}
+.reason-cont .reason-slide .rea-desc {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.reason-cont .reason-slide .rea-desc .red {
+  color: #FF2A2A;
+  font-size: 28px;
+  font-family: "游ゴシック";
+  font-weight: bold;
+  line-height: 36px;
+  letter-spacing: 2.8px;
+}
+@media print, screen and (max-width: 768px) {
+  .reason-cont .reason-slide .rea-desc .red {
+    font-size: 24px;
+  }
+}
+.reason-cont .reason-slide .rea-desc .black {
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 1.8px;
+  color: #333333;
+  font-family: "游ゴシック";
+}
+.reason-cont .fadein-before-2 {
+  border-radius: 20px 0px 0px 20px;
+  margin: 0 0 0 auto;
+}
+
+.reason-cont .fadein-before-1 {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 1s, transform 1s;
+}
+.reason-cont .slide-1 {
+  margin-bottom: 40px;
+}
+.reason-cont .fadein-after-1 {
+  opacity: 1;
+  transform: translate(0);
+}
+.reason-cont .fadein-before-2 {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 1s, transform 1s;
+}
+.reason-cont .fadein-after-2 {
+  opacity: 1;
+  transform: translate(0);
+}
+
+.voice-cont .v-exam {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .voice-cont .v-exam {
+    flex-direction: column-reverse;
+    margin-bottom: 40px;
+  }
+}
+.voice-cont .v-exam .face-box {
+  text-align: center;
+}
+.voice-cont .v-exam .face-box p {
+  color: #333333;
+}
+.voice-cont .v-exam .spee {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .voice-cont .v-exam .spee {
+    flex-direction: column-reverse;
+  }
+}
+.voice-cont .v-exam .spee .tri {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-right: 15px solid #E9F1FB;
+  border-bottom: 15px solid transparent;
+}
+@media (max-width: 768px) {
+  .voice-cont .v-exam .spee .tri {
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #E9F1FB;
+    border-bottom: 15px solid transparent;
+    margin: 0 auto;
+  }
+}
+.voice-cont .v-exam .spee .squ {
+  width: 514px;
+  height: 142px;
+  background-color: #E9F1FB;
+  border-radius: 15px 15px 15px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .voice-cont .v-exam .spee .squ {
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+.voice-cont .v-exam .spee .squ .squ-innner {
+  width: 92.2178988327%;
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: 1.6px;
+}
+.voice-cont .v-exam .spee .dust {
+  height: 82px;
+}
+@media (max-width: 768px) {
+  .voice-cont .v-exam .spee .dust {
+    height: 0;
+  }
+}
+@media (max-width: 768px) {
+  .voice-cont .v-last {
+    margin-bottom: 0;
+  }
+}
+.voice-cont .exam-two {
+  flex-direction: row-reverse;
+}
+@media (max-width: 768px) {
+  .voice-cont .exam-two {
+    flex-direction: column-reverse;
+  }
+}
+.voice-cont .exam-two .spee {
+  flex-direction: row-reverse;
+}
+@media (max-width: 768px) {
+  .voice-cont .exam-two .spee {
+    flex-direction: column-reverse;
+  }
+}
+.voice-cont .exam-two .spee .tri {
+  width: 0;
+  height: 0;
+  border-left: 15px solid #E9F1FB;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 0;
+}
+@media (max-width: 768px) {
+  .voice-cont .exam-two .spee .tri {
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #E9F1FB;
+    border-bottom: 15px solid transparent;
+    margin: 0 auto;
+  }
+}
+
+/* フェードイン(初期値) */
+.spee {
+  opacity: 0;
+  /* 最初は非表示 */
+  transition: opacity 0.8s, transform 0.8s;
+  transform: scale(0.1);
+}
+
+/* フェードイン(スクロールした後) */
+.spee.is-inview {
+  opacity: 1;
+  /* 最初は非表示 */
+  transform: scale(1);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.dot-container {
+  position: relative;
+  width: 100%;
+  background-color: #E8E8E8;
+  overflow: hidden;
+  /*はみ出した部分を非表示にする*/
+}
+.dot-container .height-cont .height1 {
+  height: 197px;
+}
+@media print, screen and (max-width: 768px) {
+  .dot-container .height-cont .height1 {
+    height: 149px;
+  }
+}
+.dot-container .height-cont .height2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 0;
+  width: 860px;
+}
+@media print, screen and (max-width: 768px) {
+  .dot-container .height-cont .height2 {
+    width: 91.4666666667%;
+    flex-direction: column;
+  }
+}
+.dot-container .height-cont .height2 .height3 {
+  padding: 60px;
+  width: 400px;
+  box-sizing: border-box;
+  margin-bottom: 32px;
+}
+@media print, screen and (max-width: 768px) {
+  .dot-container .height-cont .height2 .height3 {
+    padding: 31px;
+    width: 100%;
+  }
+}
+.dot-container .height-cont .height2 .height3 .about-title {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: "游ゴシック";
+  padding-bottom: 15px;
+  opacity: 0;
+}
+@media print, screen and (max-width: 768px) {
+  .dot-container .height-cont .height2 .height3 .about-title {
+    font-size: 24px;
+  }
+}
+.dot-container .height-cont .height2 .height3 .about-eng {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "游ゴシック";
+  padding-bottom: 30px;
+  opacity: 0;
+}
+@media print, screen and (max-width: 768px) {
+  .dot-container .height-cont .height2 .height3 .about-eng {
+    font-size: 16px;
+  }
+}
+.dot-container .height-cont .height2 .height3 .about-text {
+  font-size: 16px;
+  font-family: "游ゴシック";
+  text-align: left;
+  letter-spacing: 1.6px;
+  line-height: 27px;
+  opacity: 0;
+}
+.dot-container .height-cont .height2 .height4 {
+  margin-bottom: 60px;
+}
+@media print, screen and (max-width: 768px) {
+  .dot-container .height-cont .height2 .height4 {
+    margin-bottom: 32px;
+  }
+}
+@media print, screen and (max-width: 768px) {
+  .dot-container .height-cont .height2 .height5 {
+    margin-bottom: 60px;
+  }
+}
+
+.item {
+  position: absolute;
+  width: 314px;
+  height: 314px;
+  border-radius: 50%;
+  background: #FF2A2A;
+  animation: diagonal-move-anim 3s linear infinite;
+}
+
+@keyframes diagonal-move-anim {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(300px, 300px);
+  }
+}
+.item2 {
+  left: 700px;
+}
+
+.item3 {
+  top: 386px;
+  left: 386px;
+}
+
+.item4 {
+  top: 386px;
+  left: 1086px;
+}
+
+.item5 {
+  top: 700px;
+  left: 0;
+}
+
+.item6 {
+  top: 700px;
+  left: 700px;
+}
+
+.about {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.sec-box {
+  position: relative;
+}
+
+.about-cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 0;
+}
+.about-cont .about-items {
+  background-color: white;
+  padding: 60px;
+  width: 400px;
+  box-sizing: border-box;
+  border-radius: 20px 20px 20px 20px;
+}
+@media (max-width: 768px) {
+  .about-cont .about-items {
+    width: 100%;
+    padding: 31px;
+  }
+}
+.about-cont .about-items p {
+  text-align: center;
+}
+.about-cont .about-items .about-title {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: "游ゴシック";
+  padding-bottom: 15px;
+}
+@media (max-width: 768px) {
+  .about-cont .about-items .about-title {
+    font-size: 24px;
+  }
+}
+.about-cont .about-items .about-eng {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "游ゴシック";
+  padding-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .about-cont .about-items .about-eng {
+    font-size: 16px;
+  }
+}
+.about-cont .about-items .about-text {
+  font-size: 16px;
+  font-family: "游ゴシック";
+  text-align: left;
+  letter-spacing: 1.6px;
+  line-height: 27px;
+}
+@media (max-width: 768px) {
+  .about-cont .list3 {
+    margin-bottom: 32px;
+  }
+}
+.about-cont .list1 {
+  margin-bottom: 32px;
+}
+.about-cont .list2 {
+  margin-bottom: 32px;
+}
+
+.about .sectitle-cont .sec-title {
+  padding-top: 60px;
+}
+
+.last .last-cont {
+  padding-bottom: 119px;
+}
+.last .last-cont p {
+  text-align: center;
+}
+.last .last-cont .guide-title {
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "游ゴシック";
+  letter-spacing: 3.2px;
+  padding-top: 120px;
+  padding-bottom: 5px;
+}
+@media (max-width: 768px) {
+  .last .last-cont .guide-title {
+    padding-top: 80px;
+    font-size: 24px;
+    letter-spacing: 2.4px;
+    line-height: 38.4px;
+  }
+}
+.last .last-cont .guide-subtitle {
+  font-size: 18px;
+  font-family: "游ゴシック";
+  letter-spacing: 1.8px;
+  padding-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .last .last-cont .guide-subtitle {
+    font-size: 16px;
+  }
+}
+.last .last-cont .button a {
+  display: block;
+  color: white;
+  background-color: #FF2A2A;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: "游ゴシック";
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-sizing: border-box;
+  border-radius: 40px;
+  text-align: center;
+  transition: 1s;
+}
+.last .last-cont .button a:hover {
+  color: #FF2A2A;
+  background-color: white;
+  border: 1px solid #FF2A2A;
+}
+@media (max-width: 768px) {
+  .last .last-cont .button a {
+    font-size: 24px;
+  }
+}
+
+.footer-container {
+  background-color: #E8E8E8;
+}
+.footer-container .footer-innner {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media (max-width: 768px) {
+  .footer-container .footer-innner {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  .footer-container .footer-innner .footer-list {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+.footer-container .footer-innner .footer-list .list-title {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "游ゴシック";
+  padding-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .footer-container .footer-innner .footer-list .list-title {
+    font-size: 15px;
+  }
+}
+.footer-container .footer-innner .footer-list .list-items {
+  font-size: 16px;
+  padding-bottom: 3px;
+  padding-left: 3px;
+}
+@media (max-width: 768px) {
+  .footer-container .footer-innner .footer-list .list-items {
+    font-size: 12px;
+  }
+}
+.footer-container .footer-innner .list-under {
+  margin-bottom: 0;
+}
+.footer-container small {
+  font-size: 10px;
+  display: block;
+  text-align: center;
+  padding-bottom: 20px;
+}/*# sourceMappingURL=style.css.map */

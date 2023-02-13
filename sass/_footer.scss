@@ -1,0 +1,44 @@
+.footer-container{
+    background-color: #E8E8E8;
+    .footer-innner{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        @media (max-width: 768px) {
+            flex-wrap: wrap;
+        }
+        .footer-list{
+            @media (max-width: 768px) {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+            .list-title{
+                font-size: 16px;
+                font-weight: bold;
+                font-family: "游ゴシック";
+                padding-bottom: 10px;
+                @media (max-width: 768px) {
+                    font-size: 15px;
+                }
+            }
+            .list-items{
+                font-size: 16px;
+                padding-bottom: 3px;
+                padding-left: 3px;
+                @media (max-width: 768px) {
+                    font-size: 12px;
+                }
+            }
+        }
+        .list-under{
+            margin-bottom: 0;
+        }
+    }
+    small{
+        font-size: 10px;
+        display: block;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+}

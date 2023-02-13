@@ -1,0 +1,63 @@
+.main{
+    font-size: 16px;
+}
+
+.main-top {
+    height: 723px;
+    @media (max-width: 768px) {
+        height: auto;
+    }
+}
+
+.sectitle-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .sec-title {
+        font-size: 36px;
+        font-family: "游ゴシック";
+        font-weight: bold;
+        padding-top: 100px;
+        @media (max-width: 768px) {
+            padding-top: 80px;
+            font-size: 28px;
+            }
+    }
+
+    .underbar {
+        background-color: #333333;
+        margin-top: 20px;
+        margin-bottom: 80px;
+        display: block;
+        height: 1px;
+        width: 100px;
+        @media (max-width: 768px) {
+            width: 80px;
+            margin-bottom: 40px;
+            }
+    }
+}
+
+.sec-container {
+    width: 860px;
+    margin: 0 auto;
+    @media (max-width: 768px) {
+        width: calc( 343px / 375px * 100%);
+        }
+
+}
+
+
+.sec-container {
+    padding-bottom: 80px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}

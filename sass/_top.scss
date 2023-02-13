@@ -1,0 +1,107 @@
+.top {
+    display: flex;
+    // padding-top: 100px;
+    position: relative;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+    .invi{
+        display: none;
+        @media (max-width: 768px) {
+            width: 100%;
+            display: block;
+            img{
+                width: 100%;
+            }
+            }
+    }
+    .title-cont {
+        padding-top: 280px;
+        position: absolute;
+        left: 135px;
+
+        @media (max-width: 768px) {
+            position: static;
+            padding-top: 0;
+        }
+
+        .title {
+            font-size: 46px;
+            line-height: 73.6px;
+            letter-spacing: 4.6px;
+            font-weight: bold;
+            @media (max-width: 768px) {
+                width: calc( 343px / 375px * 100%);
+                margin: 0 auto;
+                font-size: 28px;
+                line-height: 47px;
+                padding-bottom: 10px;
+            }
+        }
+
+        .btn {
+            display: flex;
+            background-color: #FF0033;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            text-align: center;
+            justify-content: center;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.5);
+            @media (max-width: 768px) {
+                width: calc( 343px / 375px * 100%);
+                margin: 0 auto;
+            }
+            &:hover {
+                transform: scale(1.2);
+                transition-duration: 0.3s;
+            }
+
+            .btn-innner {
+                display: flex;
+            }
+
+            .btn-text {
+                font-size: 24px;
+                color: white;
+                position: relative;
+            }
+
+            .arrow {
+                width: 7px;
+                height: 7px;
+                border: 5px solid;
+                border-color: white white transparent transparent;
+                transform: rotate(45deg);
+                position: relative;
+                top: 4px;
+                left: 93px;
+            }
+        }
+    }
+
+
+
+    .fade-img {
+        position: absolute;
+        right: 0;
+        width: 1037px;
+        margin: -3px;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            position: static;
+        }
+
+        img {
+            position: absolute;
+
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+        }
+    }
+}
+
